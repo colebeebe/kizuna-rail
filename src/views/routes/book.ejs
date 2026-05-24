@@ -32,8 +32,8 @@
                                 <div class="ticket-header">
                                     <h3 class="ticket-name"><%= ticket.name %></h3>
                                     <div class="ticket-price">
-                                        <span class="price-symbol">¥</span>
-                                        <span class="price-amount"><%= Number(ticket.price).toLocaleString() %></span>
+                                        <span class="price-symbol">$</span>
+                                        <span class="price-amount"><%= ticket.price.toFixed(2) %></span>
                                     </div>
                                 </div>
                                 

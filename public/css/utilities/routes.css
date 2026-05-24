@@ -1,3 +1,22 @@
+#filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: center;
+
+    #region-filter {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+        margin: 0 auto;
+    }
+
+    #season-filter {
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+        margin: 0 auto;
+    }
+}
+
 .routes-grid {
     display: flex;
     flex-direction: column;

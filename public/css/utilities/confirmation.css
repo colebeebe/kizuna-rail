@@ -406,14 +406,131 @@ article.confirmation-page {
 }
 
 @media print {
+    header {
+        display: none !important;
+    }
+
     article.confirmation-page {
         .confirmation-actions {
             display: none;
         }
 
+        h2 {
+            font-size: 1.6rem !important;
+        }
+
         .confirmation-header {
             background-color: white;
             border: 2px solid var(--clr-primary);
+            padding: 0;
+            margin: 0;
+            border: none;
+
+            .success-icon {
+                display: none;
+            }
+
+            .confirmation-title {
+                font-size: 2rem;
+            }
+
+            .confirmation-message {
+                display: none;
+            }
+        }
+        .confirmation-content {
+            gap: 10px;
+
+            .details-grid {
+                display: flex !important;
+                flex-direction: row;
+
+                div {
+                    flex: 1;
+
+                    .detail-icon {
+                        display: none;
+                    }
+
+                    .detail-content {
+                        margin: 0;
+                        padding: 0;
+
+                        .detail-label {
+                            font-size: 0.8rem !important;
+                        }
+
+                        .detail-value {
+                            font-size: 1.4rem !important;
+                        }
+                    }
+                }
+            }
+
+            .passengers-info {
+                .passenger-title {
+                    font-size: 1.4rem !important;
+                }
+
+                .passenger-details {
+                    display: flex !important;
+                    flex-direction: row !important;
+                    justify-content: space-around;
+                    
+                    span {
+                        text-align: center;
+                    }
+
+                    .passenger-label {
+                        font-size: 0.8rem !important;
+                    }
+
+                    .passenger-value {
+                        font-size: 1.4rem !important;
+                    }
+                }
+            }
+
+            .next-steps {
+                .steps-list {
+                    gap: 0 !important;
+                    .step-number {
+                        display: none !important;
+                    }
+
+                    .step-item {
+                        .step-content {
+                            display: flex !important;
+                            flex-direction: row;
+                            gap: 10px;
+                        
+                            .step-title {
+                                font-size: 1.2rem !important;
+                            }
+
+                            .step-description {
+                                font-size: 1.2rem !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .important-info {
+            .info-title {
+                font-size: 1.5rem !important;
+            }
+        }
+
+        .confirmation-actions {
+            display: none !important;
+        }
+    }
+
+    footer {
+        p {
+            font-size: 1rem !important;
         }
     }
 }

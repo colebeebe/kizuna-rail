@@ -17,8 +17,29 @@ export const getListOfSeasons = async () => {
     return Array.from(seasons);
 };
 
+function formatMonths(data) {
+    const months = [
+        'Jan',
+        'Feb',
+        'Mar',
+        'Apr',
+        'May',
+        'Jun',
+        'Jul',
+        'Aug',
+        'Sept',
+        'Oct',
+        'Nov',
+        'Dec'
+    ];
+    // Data can be manipulated directly since it's passed by reference
+    data.operatingMonths = data.operatingMonths.map(m => months[m]);
+}
+
 export const getRouteById = async (routeId) => {
-    return db().routes.find(route => route.id == routeId) || null;
+    const data = db().routes.find(route => route.id == routeId) || null;
+    formatMonths(data);
+    return data;
 };
 
 export const getRoutesByRegion = async (region) => {
